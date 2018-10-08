@@ -14,7 +14,7 @@ import org.szcoders.web.controller.filter.ApiFilter;
 public class SpringContextConfig {
 
     @Bean
-    public FilterRegistrationBean registerApiFilterBean() {
-        return new FilterRegistrationBean(new ApiFilter());
+    public FilterRegistrationBean<ApiFilter> registerApiFilterBean() {
+        return new FilterRegistrationBean<>(new ApiFilter());
     }
 }
